@@ -63,10 +63,10 @@ public class FileDifferentiator {
     public String showCheckResult() throws IOException {
         validateByContent();
         if (String.valueOf(fileType).toLowerCase().equals(getFileExtension(file))) {
-            return "Correct! File extension is: '"+getFileExtension(file)+"' and content of the file is: '"+fileType+"'";
+            return "Correct! File extension is: '"+getFileExtension(file)+"' and it is: '"+fileType+"' file";
         }
         else {
-            return "Not correct! File extension is: '"+getFileExtension(file)+"' while in fact it is: '"+fileType+"'";
+            return "Not correct! File extension is: '"+getFileExtension(file)+"' while in fact it is: '"+fileType+"' file";
         }
     }
 }
