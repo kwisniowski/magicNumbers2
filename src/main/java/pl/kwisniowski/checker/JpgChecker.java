@@ -1,4 +1,4 @@
-package pl.kwisniowski.differentiator;
+package pl.kwisniowski.checker;
 
 import java.io.File;
 import java.io.FileInputStream;

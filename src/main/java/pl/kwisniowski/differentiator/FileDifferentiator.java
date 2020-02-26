@@ -1,5 +1,11 @@
 package pl.kwisniowski.differentiator;
 
+import pl.kwisniowski.checker.FileChecker;
+import pl.kwisniowski.checker.GifChecker;
+import pl.kwisniowski.checker.JpgChecker;
+import pl.kwisniowski.checker.TxtChecker;
+import pl.kwisniowski.exception.FileNotSupported;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -18,7 +24,7 @@ public class FileDifferentiator {
         this.file = file;
         fileType = FileType.NONE;
         if (!validateIsHandled(file)) {
-            throw new IllegalArgumentException();
+            throw new FileNotSupported();
         }
         this.txtChecker = new TxtChecker(file);
         this.jpgChecker = new JpgChecker(file);
